@@ -25,4 +25,4 @@
 Additionally we can use an Ingress to expose the same app, for that, the file `app-ingress.yaml`
 In order to use an ingress we need to enable that plugin for minikube with ```minikube addons enable ingress```
 then we can apply the file app-ingress.yaml. With that we will be able to access our mongo-express from outside the cluster
-through an ingress thats basically an nginx configuration under the hood
+through an ingress thats basically an nginx configuration under the hood. We need to map in the hosts file in the local machine the IP of local k8s `minikube ip` and the host rule defined in the `app-ingress.yaml` in this case `- host: myapp.com`
