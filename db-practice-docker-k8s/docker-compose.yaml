@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  postgresdb:
+    image: postgres
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      - DATABASE_HOST=127.0.0.1
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=qwerty
+      - POSTGRES_DB=practicedb
+    
+volumes:
+  db-data:
