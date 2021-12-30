@@ -3,6 +3,8 @@ This practice will have a docker postgres instance connected to a kubernetes clu
 I will use an ingress to map the traffic to a Service then to the Deployment, that will contain an abstraction layer
 for a pgAdmin client.
 
+![practice design](https://github.com/Sadac/k8s/blob/master/db-practice-docker-k8s/design.png)
+
 ## Part 1
 Create the docker-compose file to create the postgres volume
 
@@ -14,7 +16,7 @@ build the iamge for the pgadmin client
 Put in the ConfigMap the basic configuration data, and use the Secret to store the password for the database connection
 
 # Considerations
-1. I had issues connecting the dockerized docker with the dockerized minikube, so I had to run minikube with VirtualBox
+1. I had issues connecting the dockerized postgres with the dockerized minikube, so I had to run minikube with VirtualBox
 
 https://minikube.sigs.k8s.io/docs/drivers/
 
