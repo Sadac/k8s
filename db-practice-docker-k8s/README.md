@@ -12,9 +12,6 @@ Create the docker-compose file to create the postgres volume
 Setup the components for the kubernetes cluster (Deployment, Service, Ingress) and also
 build the iamge for the pgadmin client
 
-## Create ConfigMap and Secret
-Put in the ConfigMap the basic configuration data, and use the Secret to store the password for the database connection
-
 # Considerations
 1. I had issues connecting the dockerized postgres with the dockerized minikube, so I had to run minikube with VirtualBox
 
